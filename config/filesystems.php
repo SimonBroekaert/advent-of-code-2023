@@ -39,7 +39,15 @@ return [
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
-            'url' => env('APP_URL').'/storage',
+            'url' => env('APP_URL') . '/storage',
+            'visibility' => 'public',
+            'throw' => false,
+        ],
+
+        'puzzle-input' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/puzzle-input'),
+            'url' => env('APP_URL') . '/storage/puzzle-input',
             'visibility' => 'public',
             'throw' => false,
         ],
